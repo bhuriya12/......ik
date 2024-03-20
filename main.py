@@ -37,7 +37,7 @@ bot = Client("bot",
 auth_users = [
     int(chat) for chat in os.environ.get("AUTH_USERS", "6830450483").split(",") if chat != '']
 
-@bot.on_message(filters.command(["start"])  & ~filters.edited)
+@bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
 
     editable = await m.reply_text("𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 ♥️\n\n➠𝐔𝐬𝐞 /txt 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐅𝐫𝐨𝐦 𝐓𝐗𝐓 𝐅𝐢𝐥𝐞.\n\n➠𝐌𝐨𝐝𝐢𝐟𝐢𝐞𝐝 𝐁𝐲: 🅱️🅷🆄🆁🅸🆈🅰️ \n")
@@ -49,7 +49,7 @@ async def cancel(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command("restart")  & ~filters.edited)
+@bot.on_message(filters.command("restart") 
 async def restart_handler(_, m):
     await m.reply_text("𝐑𝐞𝐬𝐭𝐚𝐫𝐭𝐞𝐝 😎! 𝐆𝐢𝐯𝐞 /txt 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐓𝐨 𝐒𝐭𝐚𝐫𝐭 𝐏𝐫𝐨𝐜𝐞𝐬𝐬 𝐀𝐠𝐚𝐢𝐧 𝐅𝐫𝐨𝐦 𝐁𝐞𝐠𝐢𝐧𝐧𝐢𝐧𝐠", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
@@ -68,7 +68,7 @@ def get_va(link):
 
 
 
-@bot.on_message(filters.command(["txt"])  & ~filters.edited)
+@bot.on_message(filters.command(["txt"])
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(
             "𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐖𝐢𝐭𝐡 ♥️\n\n➠𝐈 𝐜𝐚𝐧 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐕𝐢𝐝𝐞𝐨𝐬 𝐅𝐫𝐨𝐦 𝐓𝐗𝐓 𝐅𝐢𝐥𝐞 𝐎𝐧𝐞 𝐁𝐲 𝐎𝐧𝐞.\n\n➠𝐌𝐨𝐝𝐢𝐟𝐢𝐞𝐝 𝐁𝐲: 🅱️🅷🆄🆁🅸🆈🅰️ \n\n➠𝐍𝐨𝐰 𝐒𝐞𝐧𝐝 𝐌𝐞 𝐘𝐨𝐮𝐫 𝐓𝐗𝐓 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐀 𝐏𝐫𝐨𝐩𝐞𝐫 𝐖𝐚𝐲\n")
@@ -327,7 +327,7 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}+bestaudio" --hls-prefer-ffmpeg --no-keep-video --remux-video mkv "{url}" -o "{name}.%(ext)s"'
 
             try:
-                Show = f"**Downloading:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`\n\n**Bot By :-** @TIGER BOSS"
+                Show = f"**Downloading:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`\n\n**Bot By :-** 🅱️🅷🆄🆁🅸🆈🅰️"
                 prog = await bot.send_message(m.chat.id, Show)
                 cc = f"**Name »** {name1} {res}.mkv\n**Batch »** {raw_text0}\n**Index »** {str(count).zfill(3)}\n\n**EXTRACTED BY »** 🅱️🅷🆄🆁🅸🆈🅰️"
                 cc1 = f"**Name »** ** {name1} {res}.pdf\n**Batch »** {raw_text0}\n**Index »** {str(count).zfill(3)}\n\n**EXTRACTED BY »** 🅱️🅷🆄🆁🅸🆈🅰️"
