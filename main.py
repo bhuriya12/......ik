@@ -31,8 +31,8 @@ import io
 
 bot = Client(
      "bot",
-      api_id=26451206,
-      api_hash=32984406271d6f3945bb536671b143a7, 
+      api_id=26451206
+      api_hash=32984406271d6f3945bb536671b143a7
       bot_token=6824204890:AAFuxy4u2UJEevw2GMMNv-Lu4wcP_HMq4t8)
 auth_users = [
     int(chat) for chat in os.environ.get("AUTH_USERS", "6830450483").split(",") if chat != '']
